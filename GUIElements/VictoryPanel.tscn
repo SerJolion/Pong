@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://GUIElements/VictoryPanelLogic.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/AtariFontFullVersion.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="VictoryPanel" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -300.0
+margin_right = 400.0
+margin_bottom = 300.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -200.0
+margin_right = 200.0
+margin_bottom = 200.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VictoryLabel" type="Label" parent="Background/VBoxContainer"]
+margin_right = 380.0
+margin_bottom = 34.0
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Victory!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VictoryPlayerName" type="Label" parent="Background/VBoxContainer"]
+margin_top = 38.0
+margin_right = 380.0
+margin_bottom = 276.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+text = "Player 1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/VBoxContainer"]
+margin_top = 280.0
+margin_right = 380.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 0, 100 )
+alignment = 1
+
+[node name="RetryButton" type="Button" parent="Background/VBoxContainer/HBoxContainer"]
+margin_right = 188.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+text = "Retry"
+
+[node name="MainMenuButton" type="Button" parent="Background/VBoxContainer/HBoxContainer"]
+margin_left = 192.0
+margin_right = 380.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+text = "Menu"
+
+[connection signal="pressed" from="Background/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_RetryButton_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/HBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]

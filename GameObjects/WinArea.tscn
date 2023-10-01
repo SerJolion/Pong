@@ -1,0 +1,104 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GameObjects/WinAreaLogic.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 300 )
+
+[node name="WinArea" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Visual" type="Node2D" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Visual"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -300.0
+margin_right = 10.0
+margin_bottom = 300.0
+size_flags_vertical = 2
+custom_constants/separation = 52
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_right = 20.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 82.0
+margin_right = 20.0
+margin_bottom = 112.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 164.0
+margin_right = 20.0
+margin_bottom = 194.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect4" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 246.0
+margin_right = 20.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect5" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 328.0
+margin_right = 20.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect6" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 410.0
+margin_right = 20.0
+margin_bottom = 440.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect7" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 492.0
+margin_right = 20.0
+margin_bottom = 522.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect8" type="ColorRect" parent="Visual/VBoxContainer"]
+margin_top = 574.0
+margin_right = 20.0
+margin_bottom = 604.0
+rect_min_size = Vector2( 20, 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,450 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/MainTheme.tres" type="Theme" id=1]
+[ext_resource path="res://GUIElements/OptionMenuLogic.gd" type="Script" id=2]
+
+[node name="OptionMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_right = 780.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "Option"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 38.0
+margin_right = 780.0
+margin_bottom = 526.0
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 768.0
+margin_bottom = 560.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BacgroundColor" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_right = 768.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "Background Color"
+align = 1
+valign = 1
+
+[node name="BGRedContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 38.0
+margin_right = 768.0
+margin_bottom = 72.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGRedContainer"]
+self_modulate = Color( 0.984314, 0.286275, 0.286275, 1 )
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "R"
+
+[node name="BGColorRedSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGRedContainer"]
+margin_left = 37.0
+margin_right = 681.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 255.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGColorRedValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGRedContainer"]
+margin_left = 685.0
+margin_right = 768.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 83, 0 )
+theme = ExtResource( 1 )
+text = "0"
+align = 2
+
+[node name="BGGrrenContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 76.0
+margin_right = 768.0
+margin_bottom = 110.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="G" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGGrrenContainer"]
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.321569, 1, 0.337255, 1 )
+text = "G"
+
+[node name="BGColorGreenSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGGrrenContainer"]
+margin_left = 37.0
+margin_right = 681.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 255.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGColorGreenValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGGrrenContainer"]
+margin_left = 685.0
+margin_right = 768.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 83, 0 )
+theme = ExtResource( 1 )
+text = "0"
+align = 2
+
+[node name="BGBlueContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 114.0
+margin_right = 768.0
+margin_bottom = 148.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGBlueContainer"]
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.345098, 0.823529, 1, 1 )
+text = "B"
+
+[node name="BGColorBlueSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGBlueContainer"]
+margin_left = 37.0
+margin_right = 681.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 255.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BGColorBlueValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BGBlueContainer"]
+margin_left = 685.0
+margin_right = 768.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 83, 0 )
+theme = ExtResource( 1 )
+text = "0"
+align = 2
+
+[node name="WinPoints" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 152.0
+margin_right = 768.0
+margin_bottom = 186.0
+theme = ExtResource( 1 )
+text = "Win points"
+align = 1
+valign = 1
+
+[node name="WinPointsContainer" type="CenterContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 190.0
+margin_right = 768.0
+margin_bottom = 224.0
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/WinPointsContainer"]
+margin_left = 284.0
+margin_right = 484.0
+margin_bottom = 34.0
+size_flags_horizontal = 0
+theme = ExtResource( 1 )
+min_value = 1.0
+max_value = 999.0
+value = 1.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BallSpeed" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 228.0
+margin_right = 768.0
+margin_bottom = 262.0
+theme = ExtResource( 1 )
+text = "Ball Speed"
+align = 1
+valign = 1
+
+[node name="BallSpeedContainer" type="CenterContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 266.0
+margin_right = 768.0
+margin_bottom = 300.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBox" type="SpinBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/BallSpeedContainer"]
+margin_left = 284.0
+margin_right = 484.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+min_value = 50.0
+max_value = 500.0
+step = 10.0
+value = 100.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RacketSpeed" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 304.0
+margin_right = 768.0
+margin_bottom = 338.0
+theme = ExtResource( 1 )
+text = "RacketSpeed"
+align = 1
+valign = 1
+
+[node name="RacketSpeedContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 342.0
+margin_right = 768.0
+margin_bottom = 376.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RacketSpeedSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/RacketSpeedContainer"]
+margin_right = 681.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 50.0
+max_value = 500.0
+value = 50.0
+
+[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/RacketSpeedContainer"]
+margin_left = 685.0
+margin_right = 768.0
+margin_bottom = 34.0
+size_flags_vertical = 1
+theme = ExtResource( 1 )
+text = "999"
+valign = 1
+
+[node name="MainColor" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 190.0
+margin_right = 780.0
+margin_bottom = 224.0
+theme = ExtResource( 1 )
+text = "Main color"
+align = 1
+valign = 1
+
+[node name="MainRedContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 190.0
+margin_right = 780.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainRedContainer"]
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0.247059, 0.247059, 1 )
+text = "R"
+
+[node name="MainColorRedSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainRedContainer"]
+margin_left = 37.0
+margin_right = 693.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_value = 255.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainColorRedValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainRedContainer"]
+margin_left = 697.0
+margin_right = 780.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "255"
+
+[node name="MainGrrenContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 190.0
+margin_right = 780.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="G" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainGrrenContainer"]
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.321569, 1, 0.337255, 1 )
+text = "G"
+
+[node name="MainColorGreenSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainGrrenContainer"]
+margin_left = 37.0
+margin_right = 693.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainGreenValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainGrrenContainer"]
+margin_left = 697.0
+margin_right = 780.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "255"
+
+[node name="MainBlueContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+visible = false
+margin_top = 190.0
+margin_right = 780.0
+margin_bottom = 224.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="B" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainBlueContainer"]
+margin_right = 33.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+custom_colors/font_color = Color( 0.345098, 0.823529, 1, 1 )
+text = "B"
+
+[node name="MainColorBlueSlider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainBlueContainer"]
+margin_left = 37.0
+margin_right = 693.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainBlueValue" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MainBlueContainer"]
+margin_left = 697.0
+margin_right = 780.0
+margin_bottom = 34.0
+theme = ExtResource( 1 )
+text = "255"
+
+[node name="PlayerOneLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 380.0
+margin_right = 768.0
+margin_bottom = 414.0
+theme = ExtResource( 1 )
+text = "Player one name"
+align = 1
+
+[node name="PlayerOneNameField" type="LineEdit" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 418.0
+margin_right = 768.0
+margin_bottom = 468.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 1 )
+text = "TestName1"
+align = 1
+
+[node name="PlayerTwoLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 472.0
+margin_right = 768.0
+margin_bottom = 506.0
+theme = ExtResource( 1 )
+text = "Player one name"
+align = 1
+
+[node name="PlayerTwoNameField" type="LineEdit" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 510.0
+margin_right = 768.0
+margin_bottom = 560.0
+rect_min_size = Vector2( 0, 50 )
+theme = ExtResource( 1 )
+text = "TestName2"
+align = 1
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 530.0
+margin_right = 780.0
+margin_bottom = 580.0
+rect_min_size = Vector2( 0, 40 )
+custom_constants/separation = 50
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OkButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+margin_right = 365.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 50 )
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "Ok"
+
+[node name="CanselButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+margin_left = 415.0
+margin_right = 780.0
+margin_bottom = 50.0
+focus_mode = 0
+size_flags_horizontal = 3
+theme = ExtResource( 1 )
+text = "Cansel"
+
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/BGRedContainer/BGColorRedSlider" to="." method="_on_BGColorRedSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/BGGrrenContainer/BGColorGreenSlider" to="." method="_on_BGColorGreenSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/BGBlueContainer/BGColorBlueSlider" to="." method="_on_BGColorBlueSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/MainRedContainer/MainColorRedSlider" to="." method="_on_BGColorRedSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/MainGrrenContainer/MainColorGreenSlider" to="." method="_on_BGColorGreenSlider_value_changed"]
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/MainBlueContainer/MainColorBlueSlider" to="." method="_on_BGColorBlueSlider_value_changed"]
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/OkButton" to="." method="_on_OkButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/CanselButton" to="." method="_on_CanselButton_pressed"]
