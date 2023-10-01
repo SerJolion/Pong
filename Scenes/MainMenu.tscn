@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/AtariFontFullVersion.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scenes/MainMenuLogic.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/MainTheme.tres" type="Theme" id=3]
+[ext_resource path="res://GUIElements/OptionMenu.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 800.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 800.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 800, 600 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="Label" parent="MainMenu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -160.0
+margin_top = 32.0
+margin_right = 160.0
+margin_bottom = 112.0
+theme = ExtResource( 3 )
+custom_fonts/font = SubResource( 1 )
+text = "Pong"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -139.0
+margin_top = -89.0
+margin_right = 139.0
+margin_bottom = 89.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="MainMenu/VBoxContainer"]
+margin_right = 278.0
+margin_bottom = 56.0
+focus_mode = 0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionButton" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 60.0
+margin_right = 278.0
+margin_bottom = 117.0
+focus_mode = 0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Option"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="MainMenu/VBoxContainer"]
+margin_top = 121.0
+margin_right = 278.0
+margin_bottom = 178.0
+focus_mode = 0
+size_flags_vertical = 3
+theme = ExtResource( 3 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OptionMenu" parent="MainMenu" instance=ExtResource( 4 )]
+visible = false
+
+[connection signal="pressed" from="MainMenu/VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/OptionButton" to="." method="_on_OptionButton_pressed"]
+[connection signal="pressed" from="MainMenu/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
